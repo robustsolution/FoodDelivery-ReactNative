@@ -2,8 +2,6 @@ import { View, Text, StatusBar, ScrollView, Image, TouchableOpacity } from 'reac
 import React, { useEffect, useLayoutEffect } from 'react'
 import { useNavigation, useRoute } from '@react-navigation/native'
 import { urlFor } from '../sanity';
-import { ArrowLeftCircleIcon, ArrowLeftIcon, StarIcon, MapPinIcon } from 'react-native-heroicons/solid';
-import { ChevronRightIcon, QuestionMarkCircleIcon } from 'react-native-heroicons/outline';
 import DishRow from '../components/dishRow';
 import BasketIcon from '../components/basketIcon';
 import { useDispatch, useSelector } from 'react-redux';
@@ -51,19 +49,26 @@ export default function ResturantScreen() {
   return (
     <>
         <BasketIcon />
-        <ScrollView  className="">
+        <ScrollView  >
             <View className="relative">
                 <Image className="w-full h-72" source={{uri: urlFor(imgUrl).url()}} />
-                <TouchableOpacity onPress={()=>navigation.goBack()} className="absolute top-14 left-4 bg-gray-50 p-2 rounded-full shadow">
+                <TouchableOpacity 
+                    onPress={()=>navigation.goBack()} 
+                    className="absolute top-14 left-4 bg-gray-50 p-2 rounded-full shadow">
                     <Icon.ArrowLeft strokeWidth={3} stroke={themeColors.bgColor(1)} />
                 </TouchableOpacity>
             </View>
-            <View style={{borderTopLeftRadius: 40, borderTopRightRadius: 40}} className="bg-white -mt-12 pt-6">
+            <View 
+                style={{borderTopLeftRadius: 40, borderTopRightRadius: 40}} 
+                className="bg-white -mt-12 pt-6">
                 <View className="px-5">
                     <Text className="text-3xl font-bold">{title}</Text>
+                    {/* copy this code from restaurant card */}
                     <View className="flex-row space-x-2 my-1">
                         <View className="flex-row items-center space-x-1">
-                            <Image source={require('../assets/images/fullStar.png')} className="h-4 w-4" />
+                            <Image 
+                                source={require('../assets/images/fullStar.png')} 
+                                className="h-4 w-4" />
                             <Text className="text-xs">
                                 <Text className="text-green-700">{rating}</Text>
                                 <Text className="text-gray-700"> (4.6k review)</Text> · <Text className="font-semibold text-gray-700">{type}</Text>

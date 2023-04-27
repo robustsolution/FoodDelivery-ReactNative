@@ -1,14 +1,12 @@
 import { View, Text, SafeAreaView, StatusBar, Image, TextInput, ScrollView } from 'react-native'
 import React, { useLayoutEffect, useState, useEffect } from 'react'
 import { useNavigation } from '@react-navigation/native'
-import { ChevronDownIcon, AdjustmentsVerticalIcon, MagnifyingGlassIcon } from 'react-native-heroicons/outline'
-import { UserCircleIcon } from 'react-native-heroicons/solid'
 import Categories from '../components/categories'
 import FeatureRow from '../components/featuredRow'
 import { getFeaturedResturants } from '../api';
 import * as Icon from "react-native-feather";
 import { themeColors } from '../theme'
-// console.log('projectId: ',process.env)
+
 export default function HomeScreen() {
 
     const [featuredCategories, setFeaturedCategories] = useState([])
@@ -25,7 +23,7 @@ export default function HomeScreen() {
   return (
     <SafeAreaView className="bg-white" >
     <StatusBar
-        barStyle="dark-content" // Here is where you change the font-color
+        barStyle="dark-content" 
     />
     {/* search bar */}
         <View className="flex-row items-center space-x-2 px-4 pb-2 ">

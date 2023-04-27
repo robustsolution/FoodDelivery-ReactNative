@@ -33,7 +33,9 @@ export default function Categories() {
               let textClass = isActive? ' font-semibold text-gray-800': ' text-gray-500';
               return(
                 <View key={category._id} className="flex justify-center items-center mr-6">
-                  <TouchableOpacity onPress={()=> setActiveCategory(category._id)} className={"p-1 rounded-full shadow"+ btnClass}>
+                  <TouchableOpacity 
+                    onPress={()=> setActiveCategory(category._id)} 
+                    className={"p-1 rounded-full shadow"+ btnClass}>
                     <Image style={{width: 45, height: 45}} source={{
                         uri: urlFor(category.image).url(),
                     }} 
@@ -50,18 +52,3 @@ export default function Categories() {
     
   )
 }
- 
-
-                // <TouchableOpacity 
-                // // style={{backgroundColor: themeColors.bg}} 
-                // onPress={()=> setActiveCategory(category._id)} 
-                // key={category._id} 
-                // className={"flex-row bg-gray-200 justify-center rounded-full p-1 items-center mr-2 shadow " + btnClass}>
-                //   <View  className={"p-1 rounded-full bg-white"}>
-                //     <Image style={{width: 40, height: 40}} source={{
-                //         uri: urlFor(category.image).url(),
-                //     }} 
-                //     />
-                //   </View>
-                //   <Text className={"text-xs px-2"+textClass}>{category.name}</Text>
-                // </TouchableOpacity>

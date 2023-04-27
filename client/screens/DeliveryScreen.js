@@ -3,8 +3,6 @@ import React from 'react'
 import { useNavigation } from '@react-navigation/native'
 import { useDispatch, useSelector } from 'react-redux';
 import { selectResturant } from '../slices/resturantSlice';
-import { XCircleIcon } from 'react-native-heroicons/solid';
-import * as Progress from 'react-native-progress';
 import MapView, {Marker} from 'react-native-maps';
 import { themeColors } from '../theme';
 import * as Icon from "react-native-feather";
