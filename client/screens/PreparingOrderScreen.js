@@ -13,7 +13,7 @@ export default function PreparingOrderScreen() {
     },[])
   return (
     <View className="flex-1 bg-white justify-center items-center">
-      <Image source={require('../assets/images/delivery.gif')} animation="slideInUp" iterationCount={1} className="h-80 w-80" />
+      <Image source={require('../assets/images/delivery.gif')} className="h-80 w-80" />
     </View>
   )
 }
