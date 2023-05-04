@@ -32,6 +32,7 @@ export const categories = [
 
 ]
 
+
 export const featured = {
     id: 1,
     title: 'Hot and Spicy',
@@ -78,8 +79,8 @@ export const featured = {
             name: 'Papa Johns',
             image: require('../assets/images/pizza.png'),
             description: 'Hot and spicy pizzas',
-            lng: 38.2145602,
-            lat: -85.5324269,
+            lng: -85.5324269,
+            lat: 38.2145602,
             address: '434 second street',
             stars: 4,
             reviews: '4.4k',
@@ -114,8 +115,8 @@ export const featured = {
             name: 'Papa Johns',
             image: require('../assets/images/pizza.png'),
             description: 'Hot and spicy pizzas',
-            lng: 38.2145602,
-            lat: -85.5324269,
+            lng: -85.5324269,
+            lat: 38.2145602,
             address: '434 second street',
             stars: 4,
             reviews: '4.4k',
