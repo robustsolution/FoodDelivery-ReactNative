@@ -2,13 +2,13 @@ import { defineType} from 'sanity'
 
 export default defineType({
   name: 'featured',
-  title: 'Featured Resturants',
+  title: 'Featured Restaurants',
   type: 'document',
   fields: [
     {
       name: 'name',
       type: 'string',
-      title: 'Resturant name',
+      title: 'Restaurant name',
       validation: rule=> rule.required(),
    },
    {
@@ -18,9 +18,9 @@ export default defineType({
       validation: rule=> rule.max(200),
    },
    {
-      name: 'resturants',
+      name: 'restaurants',
       type: 'array',
-      title: 'Resturants',
+      title: 'Restaurants',
       of: [{type: 'reference', to: [{type: 'resturant'}]}]
    }
   ],

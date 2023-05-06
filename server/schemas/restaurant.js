@@ -2,13 +2,13 @@
 
 export default {
   name: 'resturant',
-  title: 'Resturants',
+  title: 'Restaurants',
   type: 'document',
   fields: [
    {
       name: 'name',
       type: 'string',
-      title: 'Resturant name',
+      title: 'Name',
       validation: rule=> rule.required(),
    },
    {
@@ -20,22 +20,22 @@ export default {
    {
       name: 'image',
       type: 'image',
-      title: 'image of the resturant',
+      title: 'image of the restaurant',
    },
    {
       name: 'lat',
       type: 'number',
-      title: 'latitude of the resturant',
+      title: 'latitude of the restaurant',
    },
    {
       name: 'lng',
       type: 'number',
-      title: 'longitude of the resturant',
+      title: 'longitude of the restaurant',
    },
    {
       name: 'address',
       type: 'string',
-      title: 'Resturant address',
+      title: 'Restaurant address',
       validation: rule=> rule.required(),
     },
     {
